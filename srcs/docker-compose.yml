@@ -1,0 +1,37 @@
+services:
+	nginx:
+    depends_on:
+      - wordpress
+		build: ./nginx
+		networks:
+      - localhost
+    port:
+      - "443:443"
+    volumes:
+      - wp-files:/var/www/wordpress
+    restart: always
+
+	mariadb:
+		build: ./mariadb
+		networks:
+      - localhost
+    volumes:
+      - wp-db
+    restart: always
+
+	wordpress:
+    depends_on:
+      - mariadb
+		build: ./wordpress
+		networks:
+      - localhost
+    volumes:
+      - wp-files:/var/www/wordpress
+    restart: always
+
+networks:
+  localhost:
+
+volumes:
+	wp-db:
+	wp-files:

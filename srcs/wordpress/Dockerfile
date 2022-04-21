@@ -1,6 +1,7 @@
 FROM debian:buster
 RUN apt-get update
 RUN apt-get install -y php7.3 php-fpm php-mysqli mariadb-client
+COPY www.com /etc/php/7.3/fpm/pool.d
 ADD https://wordpress.org/latest.tar.gz /var/www/
 RUN cd /var/www && tar xvf latest.tar.gz
 RUN rm -f /var/www/latest.tar.gz

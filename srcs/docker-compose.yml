@@ -1,3 +1,5 @@
+version: "3.5"
+
 services:
   nginx:
     depends_on:
@@ -48,11 +50,11 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /Users/nlaurids/data/wp-db
+      device: /home/nlaurids/data/wp-db
       
   wp-files:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /Users/nlaurids/data/wp-files
+      device: /home/nlaurids/data/wp-files

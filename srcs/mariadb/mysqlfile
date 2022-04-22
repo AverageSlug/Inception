@@ -1,3 +1,6 @@
 CREATE DATABASE WordPress CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-GRANT ALL ON WordPress.* TO 'root'@'localhost' IDENTIFIED BY 'bestpw69' WITH GRANT OPTION;
-CREATE USER 'pleb'@'localhost' IDENTIFIED BY 'betterpw420';
+CREATE USER 'pleb'@'%' IDENTIFIED BY 'bestpw69';
+GRANT ALL ON WordPress.* TO 'pleb'@'%';
+FLUSH PRIVILEGES;
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'betterpw420';

@@ -3,7 +3,7 @@ NAME = inception
 all: $(NAME)
 
 $(NAME):
-	sudo docker-compose -f srcs/docker-compose.yml up -d
+	sudo docker-compose -f srcs/docker-compose.yml up
 
 clean:
 	sudo docker-compose -f srcs/docker-compose.yml down

@@ -6,53 +6,45 @@ services:
       - wordpress
     container_name: nginx
     build: ./nginx
-    image: nginx
     networks:
       - localhost
     ports:
       - "443:443"
     volumes:
-      - type: volume
-        source: wp-files
-        target: /var/www/wordpress
+      - wp-files:/var/www/wordpress
     restart: always
   mariadb:
     container_name: mariadb
     build: ./mariadb
-    image: mariadb
     networks:
       - localhost
     volumes:
-      - type: volume
-        source: wp-db
-        target: /var/lib/mysql
+      - mariadb:/var/lib/mysql
     restart: always
   wordpress:
     depends_on:
       - mariadb
     container_name: wordpress
     build: ./wordpress
-    image: wordpress
     networks:
       - localhost
     volumes:
-      - type: volume
-        source: wp-files
-        target: /var/www/wordpress
+      - wp-files:/var/www/wordpress
     restart: always
 
 networks:
   localhost:
 
 volumes:
-  wp-db:
+  mariadb:
+    name: mariadb
     driver: local
     driver_opts:
       type: none
       o: bind
       device: /home/nlaurids/data/wp-db
-      
   wp-files:
+    name: wp-files
     driver: local
     driver_opts:
       type: none

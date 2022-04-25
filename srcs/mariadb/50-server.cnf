@@ -2,8 +2,8 @@
 [mysqld]
 
 user            = mysql
-pid-file        = /var/run/mysqld/mysqld.pid
-socket          = /var/run/mysqld/mysqld.sock
+pid-file        = /run/mysqld/mysqld.pid
+socket          = /run/mysqld/mysqld.sock
 port            = 3306
 basedir         = /usr
 datadir         = /var/lib/mysql
@@ -17,4 +17,4 @@ collation-server      = utf8mb4_general_ci
 
 [embedded]
 [mariadb]
-[mariadb-10.0]
+[mariadb-10.3]

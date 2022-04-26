@@ -1,3 +1,2 @@
 CREATE DATABASE WordPress;
-GRANT ALL ON WordPress.* TO 'root'@'%' IDENTIFIED BY 'pass' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
+GRANT ALL ON WordPress.* TO 'root'@'%' IDENTIFIED BY 'pass';

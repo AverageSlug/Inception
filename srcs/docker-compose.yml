@@ -19,7 +19,7 @@ services:
     networks:
       - localhost
     volumes:
-      - mariadb:/var/lib/mysql
+      - wp-db:/var/lib/mysql
     restart: always
   wordpress:
     depends_on:
@@ -36,8 +36,8 @@ networks:
   localhost:
 
 volumes:
-  mariadb:
-    name: mariadb
+  wp-db:
+    name: wp-db
     driver: local
     driver_opts:
       type: none

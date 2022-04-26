@@ -5,7 +5,6 @@ define( 'DB_PASSWORD', 'pass' );
 define( 'DB_HOST', 'mariadb' );
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
-define( 'WP_ALLOW_REPAIR', true );
 define('AUTH_KEY',         '+2V[[M{A2vjz5f0Us<6ahg`Pd?3Fj99j&%^IMz4+o</;]Nttd2s1+)A=Cesevz%Q');
 define('SECURE_AUTH_KEY',  'T=ktv%# <4aeDZwUi0-.0]!F5AMJ4{aZiY}W_ /]]|:qUzQ~;yX{=G||mvnW_+M|');
 define('LOGGED_IN_KEY',    '4L#111Kw@M5+UX8@O-w#D#`Sks~:W+Gg;23o~;_7$9*}>mLN*T8xWr(QI!^X3D_5');
@@ -15,7 +14,7 @@ define('SECURE_AUTH_SALT', 'ue ekjV},mBjA5fM9[xAJ CyIbB<.cdmu/ptJF%K@+#1YON<DBh!
 define('LOGGED_IN_SALT',   ';-C0KO 3Vt&XfKL,lMH~V!yd:fL1NGaBd1%e$GI@ANkH-}>Y#Gs-cV(+,-nHRE$*');
 define('NONCE_SALT',       ')#5%6lCm{RV!-TkN2C8q&1PB*b5<u_LwLF@!w{;l`F}Ds=ma.)`^^W3vYjt99/r(');
 $table_prefix = 'wp_';
-define( 'WP_DEBUG', true );
+define( 'WP_DEBUG', false );
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __FILE__ . '/' );
 	}

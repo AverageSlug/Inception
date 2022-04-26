@@ -1,6 +1,6 @@
 FROM debian:buster
 RUN apt-get update
-RUN apt-get install -y php7.3 php-fpm php-mysqli mariadb-client
+RUN apt-get install -y php-fpm php-mysql
 COPY www.conf /etc/php/7.3/fpm/pool.d/
 ADD https://wordpress.org/wordpress-5.9.3.tar.gz /var/www/
 RUN cd /var/www && tar xvf wordpress-5.9.3.tar.gz

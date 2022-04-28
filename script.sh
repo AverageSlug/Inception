@@ -1,1 +1,1 @@
-sudo docker stop $(sudo docker ps -qa); sudo docker rm $(sudo docker ps -qa); sudo docker rmi $(sudo docker images -qa); sudo docker volume rm $(sudo docker volume ls -q); sudo docker network rm $(sudo docker network ls -q) 2>/dev/null
+docker rm $(docker ps -qa); docker rmi $(docker images -qa); docker volume rm $(docker volume ls -q)

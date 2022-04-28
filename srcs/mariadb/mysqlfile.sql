@@ -1,2 +1,5 @@
 CREATE DATABASE WordPress;
-GRANT ALL ON WordPress.* TO 'root'@'%' IDENTIFIED BY 'pass';
+CREATE USER 'pleb'@'%' IDENTIFIED BY 'pass';
+GRANT ALL ON WordPress.* TO 'pleb'@'%';
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('69420');
+FLUSH PRIVILEGES;
